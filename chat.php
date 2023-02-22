@@ -2,7 +2,7 @@
 
 if (isset($_GET['message'])){
     $message = $_GET["message"];
-    $file = fopen('http://127.0.0.1:5500/chat.txt', 'a+');
+    $file = fopen('http://chat.txt', 'a+');
     fputs($file, $message . "\n");
     echo "ok";
     die();

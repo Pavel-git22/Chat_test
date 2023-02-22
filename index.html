@@ -94,7 +94,7 @@
         var message = document.getElementById('message').value;
 
         (async () => {
-            var response = await fetch('http://127.0.0.1:5500/chat.php?message=' + message);
+            var response = await fetch('http://chat.php?message=' + message);
             var answer = await response.text();
             document.getElementById('message').value = '';
 
@@ -108,7 +108,7 @@
 
     function get() {
         (async () => {
-            var response = await fetch('http://127.0.0.1:5500/chat.php');
+            var response = await fetch('http://chat.php');
             var answer = await response.text();
             document.getElementById('chat').innerText = answer;
 
